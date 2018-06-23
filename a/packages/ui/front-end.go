@@ -1,13 +1,13 @@
-package db
+package ui
 
 import (
 	"fmt"
 )
 
 // Message variable contain message
-var Message = "DB package message"
+var Message = "ui package message"
 
 // GetMessage return message
 func GetMessage() {
-	fmt.Println("I am in DB package")
+	fmt.Println("I am in UI package")
 }
