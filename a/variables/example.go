@@ -21,8 +21,14 @@ func main() {
 	fmt.Println("e-", e)
 	fmt.Println("f-", f)
 	fmt.Println("g-", g)
+	fmt.Println(increment(5))
 
 	// formtat specifier
 	fmt.Printf("data type of a=%T\n", a)
 	fmt.Printf("value of a = %v\n", a)
+}
+
+var increment = func(a int) int {
+	a++
+	return a
 }
