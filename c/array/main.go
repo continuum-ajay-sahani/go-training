@@ -6,7 +6,9 @@ import (
 
 func main() {
 	//example1()
-	example2()
+	//example2()
+	//example3()
+	example4()
 }
 
 func example1() {
@@ -22,4 +24,14 @@ func example2() {
 	for i, v := range a {
 		fmt.Println(i, v)
 	}
+}
+
+func example3() {
+	r := [...]int{99: -1, 8}
+	fmt.Println(r)
+}
+
+func example4() {
+	b := [...]int{1, 2}
+	fmt.Println(b)
 }
