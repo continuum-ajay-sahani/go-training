@@ -8,7 +8,9 @@ func main() {
 	example3(2, 3)
 	example4(2, "mon")
 	example5(2, "tue")
-	example6()
+	val := example6(10, checkFunc)
+	fmt.Println(val)
+	example7()
 }
 
 func example1() {
@@ -39,6 +41,14 @@ func example5(a int, b string) (c int, d string) {
 	return c, d
 }
 
+var checkFunc = func(x int) int {
+	return x + 5
+}
+
+func example6(a int, b func(x int) int) int {
+	return b(a)
+}
+
 type point struct {
 	x int
 }
@@ -48,7 +58,7 @@ func (p point) add(q point) int {
 	return p.x + q.x
 }
 
-func example6() {
+func example7() {
 	p := point{
 		x: 5,
 	}
