@@ -6,7 +6,8 @@ import (
 
 func main() {
 	//example1()
-	example2()
+	//example2()
+	example3()
 }
 
 func example1() {
@@ -36,4 +37,11 @@ func example2() {
 	for index, value := range months {
 		fmt.Println(index, value)
 	}
+}
+
+func example3() {
+	var months []string
+	months = append(months, "Jan")
+	months = append(months, "Feb")
+	fmt.Println(months)
 }
