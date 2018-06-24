@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	//example1()
-	example2()
+	example1()
+	//example2()
 }
 
 // Person represent information of person
@@ -16,12 +16,23 @@ type Person struct {
 	Address
 }
 
+// BindMethod function binding
+func (p Person) BindMethod() int {
+	msg := p.addMethod()
+	fmt.Println(msg)
+	return 100
+}
+
 // Address represnt adddress
 type Address struct {
 	Area    string
 	City    string
 	State   string
 	Pincode int
+}
+
+func (a Address) addMethod() string {
+	return "address bind method"
 }
 
 func example1() {
@@ -40,6 +51,8 @@ func example1() {
 	fmt.Println(p.Area)
 	fmt.Println(p.Pincode)
 	fmt.Printf("%v\n", p)
+	v := p.BindMethod()
+	fmt.Println(v)
 }
 
 //---------------------------------------------
