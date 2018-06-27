@@ -17,5 +17,4 @@ func main() {
 	fmt.Println(studyGroup)
 	sort.Sort(studyGroup)
 	fmt.Println(studyGroup)
-
 }
